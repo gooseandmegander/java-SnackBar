@@ -2,19 +2,30 @@ package snackBar;
 
 public class Snack {
     private static int maxID = 0;
-    private int id;
+    private final int ID;
     private String name;
-    private int quantity;
+    private int quantity = 0;
     private double cost;
     private int vendingID;
 
     public Snack(String name, double cost, int quantity, int vendingID) {
         maxID++;
-        id = maxID;
+        ID = maxID;
         this.name = name;
         this.cost = cost;
         this.quantity = quantity;
         this.vendingID = vendingID;
+    }
+
+    public Snack(String name, int quantity, double cost) {
+        maxID++;
+        ID = maxID;
+        this.name = name;
+        this.cost = cost;
+    }
+
+    public int getID() {
+        return ID;
     }
 
     public void setName(String name) {
@@ -23,6 +34,14 @@ public class Snack {
 
     public String getName() {
         return name;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
     public int getQty() {
@@ -41,5 +60,16 @@ public class Snack {
     public double buySnack(int qty) {
         quantity -= qty;
         return getTotalCost(qty);
+    }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Snack{" +
+                "ID=" + ID +
+                ", name='" + name + '\'' +
+                ", quantity=" + quantity +
+                ", cost=" + cost +
+                ", vendingID=" + vendingID +
+                '}';
     }
 }
