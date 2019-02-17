@@ -2,12 +2,12 @@ package snackBar;
 
 public class Vending {
     private static int maxID = 0;
-    public int id;
-    public String name;
+    private final int ID;
+    private String name;
 
     public Vending(String name) {
         maxID++;
-        id = maxID;
+        ID = maxID;
         this.name = name;
     }
 
@@ -17,5 +17,17 @@ public class Vending {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Vending{" +
+                "ID=" + ID +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
