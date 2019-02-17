@@ -13,12 +13,12 @@ public class Main {
 
         // Instantiate Snacks
         // Vending Machine "Food"
-        Snack s1 = new Snack("Chips", 1.75, 36, v1.ID);
-        Snack s2 = new Snack("Chocolate Bar", 1.00, 36, v1.ID);
-        Snack s3 = new Snack("Pretzel", 2.00, 30, v1.ID);
+        Snack s1 = new Snack("Chips", 1.75, 36, v1.getID());
+        Snack s2 = new Snack("Chocolate Bar", 1.00, 36, v1.getID());
+        Snack s3 = new Snack("Pretzel", 2.00, 30, v1.getID());
         // Vending Machine "Drink"
-        Snack s4 = new Snack("Soda", 2.50, 24, v2.ID);
-        Snack s5 = new Snack("Water", 2.75, 20, v2.ID);
+        Snack s4 = new Snack("Soda", 2.50, 24, v2.getID());
+        Snack s5 = new Snack("Water", 2.75, 20, v2.getID());
 
 
         // Customer Transactions
